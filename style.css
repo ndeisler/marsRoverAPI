@@ -1,0 +1,53 @@
+body {
+    background-image: url("475707.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    font-family: 'Space Mono', monospace;
+
+}
+
+.box {
+    margin: 20px;
+    width: 400px;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+.photo img {
+    width: 250px;
+    height: 250px;
+    padding: 5px;
+    
+}
+
+.photo {
+    /* display: inline;  */
+    border: solid 3px rgb(255, 255, 255);
+    width: 260px;
+    height: 260px;
+    margin: 10px;
+    
+}
+
+.imageInfo {
+    width: 90vw;
+    margin: auto;
+    margin-top: 40px;
+}
+.imageInfo ul {
+    list-style-type: none;
+    /* display: inline;  */
+}
+
+.imageInfo li {
+    display: inline-block;
+}
+.imageInfo h1 {
+    text-align: center;
+}
