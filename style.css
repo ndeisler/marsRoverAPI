@@ -4,8 +4,8 @@ body {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    color: white;
-    font-family: 'Space Mono', monospace;
+    color: white !important;
+    font-family: 'Space Mono', monospace !important;
 
 }
 
@@ -50,4 +50,40 @@ img {
 }
 .imageInfo h1 {
     text-align: center;
+}
+
+.rovers {
+    width: 200px !important;
+    height: 30px !important;
+    margin: 20px 0px;
+}
+
+.days {
+    width: 100px !important;
+    height: 30px !important;
+    /* display: none !important; */
+}
+
+.days2 {
+    width: 100px !important;
+    height: 30px !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .days {
+        width: 100px !important;
+        height: 40px !important;
+        /* display: none !important; */
+    }
+    .rovers {
+        width: 200px !important;
+        height: 40px !important;
+        margin: 20px 0px;
+    }
+    body {
+        /* width: 200px; */
+        /* margin: auto; */
+        
+    }
+    
 }

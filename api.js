@@ -15,7 +15,8 @@ const div = document.querySelector(".imageInfo");
 const roversImg = document.querySelector("#opportunity")
 const h2 = document.querySelector(".h2");
 const h1 = document.querySelector(".h1");
-const p = document.querySelector(".p")
+const p = document.querySelector(".p");
+
 searchForm.addEventListener("submit", fetchNASA);
 
 select.addEventListener('change', (event) =>{
@@ -25,17 +26,24 @@ select.addEventListener('change', (event) =>{
         h1.innerText = "Opportunity";
         h2.innerText = "Landing date: 2004-01-25";
         p.innerText = "Photos are organized by the sol (Martian rotation or day) on which they were taken, counting up from the rover's landing date. Opportunity has a max of 5111 sol days! Please choose a number between 1-5111 to get all the photos taken on that sol day.";
+        num.setAttribute("placeholder", "1-5111");
     } else if (event.target.value === "spirit") {
         h1.innerText = "Spirit";
 
         h2.innerText = "Landing date: 2004-01-04";
         p.innerText = "Photos are organized by the sol (Martian rotation or day) on which they were taken, counting up from the rover's landing date. Spirit has a max of 2208 sol days! Choose a sol day between 1-2208 to get all the photos taken on that sol day.";
+        num.setAttribute("placeholder", "1-2208");
+
     } else if (event.target.value === "curiosity") {
         h1.innerText = "Curiosity";
-
         h2.innerText = "Landing date: 2012-08-06";
         p.innerText = "Photos are organized by the sol (Martian rotation or day) on which they were taken, counting up from the rover's landing date. Curiosity has a max of 2297 sol days! Choose a sol day between 1-2208 to get all the photos taken on that sol day.";
-        
+        num.setAttribute("placeholder", "1-2297");   
+    } else {
+        h1.innerText = "";
+        h2.innerText = "";
+        p.innerText = "";
+        num.setAttribute("placeholder", ""); 
     }
 })
 
