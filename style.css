@@ -59,15 +59,12 @@ img {
 }
 
 .days {
-    width: 100px !important;
+    width: 150px !important;
     height: 30px !important;
     /* display: none !important; */
 }
 
-.days2 {
-    width: 100px !important;
-    height: 30px !important;
-}
+
 
 @media only screen and (max-width: 600px) {
     .days {

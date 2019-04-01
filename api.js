@@ -37,7 +37,7 @@ select.addEventListener('change', (event) =>{
     } else if (event.target.value === "curiosity") {
         h1.innerText = "Curiosity";
         h2.innerText = "Landing date: 2012-08-06";
-        p.innerText = "Photos are organized by the sol (Martian rotation or day) on which they were taken, counting up from the rover's landing date. Curiosity has a max of 2297 sol days! Choose a sol day between 1-2208 to get all the photos taken on that sol day.";
+        p.innerText = "Photos are organized by the sol (Martian rotation or day) on which they were taken, counting up from the rover's landing date. Curiosity has a max of 2297 sol days! Choose a sol day between 1-2297 to get all the photos taken on that sol day.";
         num.setAttribute("placeholder", "1-2297");   
     } else {
         h1.innerText = "";
@@ -54,6 +54,12 @@ function fetchNASA(e) {
         alert("Pick a ROVER");
     } else if (num.value === "") {
         alert("put in a Number");
+    } else if (select.value === "opportunity" && (num.value === 0 || num.value > 5111)) {
+        alert("Choose a number between 1-5111!");
+    } else if (select.value === "spirit" && (num.value === 0 || num.value > 2208)) {
+        alert("Choose a number between 1-2208!");
+    } else if (select.value === "curiosity" && (num.value === 0 || num.value > 2297)) {
+        alert("Choose a number between 1-2297!");
     } else {
         // curiosity/photos?sol=1000&api_key=DEMO_KEY
         url = baseURL + "/" + select.value + "/photos?sol=" + num.value + "&api_key=" + key;
